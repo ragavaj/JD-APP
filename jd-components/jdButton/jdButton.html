@@ -1,0 +1,11 @@
+<div ng-if="component.view && component.view=='icon'">
+    <md-button class="md-fab md-raised md-default-theme {{component.placement}} md-mini" aria-label="{{component.label}}" 
+        ng-click='component.action(pageScope, services)'>
+        <div class="jd-buttonicon">
+            <ng-md-icon icon="{{component.icontype}}" size="25"></ng-md-icon>
+        </div>
+    </md-button>
+</div>
+<div ng-if="!component.view">
+    <md-button md-no-ink class=" md-raised md-default-theme" ng-click='component.action(pageScope, services)'>{{component.label}}</md-button>
+</div>

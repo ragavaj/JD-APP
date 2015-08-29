@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search Page</title>
+  <script src="/dist/js/jquery-1.11.3.min.js"></script>
+  <script src="/node_modules/angular/angular.js"></script>
+  
+  <!-- Includes Begin -->
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css">
+  
+  <script src="/node_modules/angular-material/angular-material.js"></script>
+  <script src="/node_modules/angular-animate/angular-animate.js"></script>
+  <script src="/node_modules/angular-aria/angular-aria.js"></script>
+  <script src="/node_modules/angular-new-router/dist/router.es5.js"></script>
+  <script src="/node_modules/angular-material-icons/angular-material-icons.js"></script>
+  <script src="/node_modules/angular-messages/angular-messages.js"></script>
+  <script src="/node_modules/angular-data-table/release/dataTable.helpers.min.js"></script>
+  
+  <script src="/dist/js/jquery.maskedinput.js"></script>
+  <script src="/dist/js/jquery.timepicker.min.js"></script>
+  <script src="/dist/js/angular-drag-and-drop-lists.js"></script>
+  <script src="/dist/js/jquery-ui-1.11.4/jquery-ui.js"></script>
+  <script src="/bower_components/handsontable/dist/handsontable.full.js"></script>
+  
+  <link rel="stylesheet" href="./dist/js/jquery-ui-1.11.4/jquery-ui.css">
+  <link rel="stylesheet" href="./dist/js/jquery.timepicker.css">
+  <link rel="stylesheet" href="./bower_components/handsontable/dist/handsontable.full.min.css">
+  
+  <script src="/jd-components/jdApp/jdApp.js"></script>
+  <script src="/jd-components/jdApp/jdComponents.js"></script>
+  
+  <script src="/jd-components/jdInput/jdInput.js"></script>
+  <script src="/jd-components/jdContainer/jdContainer.js"></script>
+  <script src="/jd-components/jdButton/jdButton.js"></script>
+  <script src="/jd-components/jdTextArea/jdTextArea.js"></script>
+  <script src="/jd-components/jdDragDropList/jdDragDropList.js"></script>
+  
+  <link rel="stylesheet" href="./jd-components/jdContainer/jdContainer.css">
+  <link rel="stylesheet" href="./jd-components/jdDragDropList/jdDragDropList.css">
+  <link rel="stylesheet" href="./node_modules/angular-data-table/release/dataTable.css">
+  <link rel="stylesheet" href="./node_modules/angular-data-table/release/material.css">
+  
+  <link rel="stylesheet" href="./dist/js/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/js/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./dist/js/prism.css">
+  <link rel="stylesheet" href="./dist/js/demo-framework.css">
+  <link rel="stylesheet" type="text/css" href="./dist/js/simple.css" />
+  <link rel="stylesheet" type="text/css" href="./dist/js/nested.css" />
+  <link rel="stylesheet" type="text/css" href="./dist/js/types.css" />
+  <link rel="stylesheet" type="text/css" href="./dist/js/advanced.css" />
+  <!-- Includes End -->
+  
+  <script src="./searchApp/searchComponents.js"></script>
+  <script src="./searchApp/searchActions.js"></script>
+  <script src="./searchApp/searchApp.js"></script>
+  
+  
+  <script src="./offerApp/offerComponents.js"></script>
+  <script src="./offerApp/offerActions.js"></script>
+  <script src="./offerApp/offerApp.js"></script>
+</head>
+<!--body ng-app="searchApp" ng-controller="searchAppCtrl as appCtrl">
+  <jd-container component="searchWidget" page-scope="searchWidget.scope"></jd-container>
+</body-->
+<body ng-app="offerApp" ng-controller="offerAppCtrl as appCtrl">
+  <!--jd-container component="offerPanel" page-scope="offerPanel.scope"></jd-container-->
+  <jd-drag-drop-list></jd-drag-drop-list>
+</body>
+</html>

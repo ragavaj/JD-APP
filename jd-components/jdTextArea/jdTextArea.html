@@ -1,0 +1,14 @@
+<div layout="row">
+	<label flex='40' class="jd-label">{{component.label}}</label>
+	<span layout="column" flex>
+		<textarea class="{{parentScope[component.id].error ? 'jd-errortext' : ''}}" name="{{component.id}}" rows="{{component.rows}}" 
+			ng-model="parentScope[component.id].value" flex input-mask ng-focus="infocus = true" ng-blur="infocus = true"> 
+		</textarea>
+		<div style="height:10px; clear:both; position: relative;">
+			<span ng-show="infocus && error ? parentScope[component.id].error : false" class="jd-error">
+				<ng-md-icon icon="warning" size="14" class="icon"></ng-md-icon>
+				<span>{{parentScope[component.id].error}}</span>
+			</span>
+		</div>
+	</span>
+</div>

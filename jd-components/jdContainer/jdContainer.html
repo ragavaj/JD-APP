@@ -1,0 +1,25 @@
+<div class="jd-{{component.jtheme(component)}} {{containerStyle}} jd-container {{!component.background ? 'jd-nobackground' : ''}}" 
+    style="{{component.width ? 'width: '  + component.width + 'px' : ''}}">
+    <span class="jd-title" layout="row" ng-if="component.title">
+        <hr flex="5"/><span>{{component.title}}</span>
+        <hr flex/>
+    </span>
+    <section layout layout-align="start start" flex>
+        <section layout="{{component.alignment}}" flex>
+            <div ng-repeat="comp in component.components" flex={{comp.flex ? 'comp.flex' : ''}}>
+                <div ng-if="comp.type == 'text' || comp.type == 'date'" flex class="jd-input-container">
+                    <jd-input component="comp" parent-scope='component.scope' page-scope="pageScope"></jd-input> 
+                </div>
+                <div ng-if="comp.type == 'container'" flex class="jd-input-container">
+                    <jd-container component="comp" parent-scope='component.scope[comp.id]' page-scope="pageScope"></jd-container>
+                </div>
+                <div ng-if="comp.type == 'button'">
+                    <jd-button component="comp" parent-scope='component.scope' page-scope="pageScope"></jd-button>
+                </div>
+                <div ng-if="comp.type == 'textarea'" flex class="jd-input-container">
+                    <jd-textarea component="comp" parent-scope='component.scope' page-scope="pageScope"></jd-textarea>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
